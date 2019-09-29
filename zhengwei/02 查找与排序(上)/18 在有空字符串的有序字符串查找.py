@@ -22,7 +22,7 @@ def findchar(s: str, low: int, high: int, target: str) -> int:
     mid = (low + high) // 2
 
     if s[mid] == target:
-        print('奇怪')
+        # print('奇怪')
         return mid
 
     cur = mid
