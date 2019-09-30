@@ -6,7 +6,7 @@ print('nums is ', nums)
 
 
 # 分区的逻辑的确很重要的特性!!!
-def partition(nums, low, high):
+def partition(nums, low, high) -> int:
     '''
         一遍单向扫描法,定主元的情况
         该分区算法的逻辑是把第一个当做最大值来进行考虑,然后从中把最大的值放入到
@@ -36,7 +36,7 @@ def partition(nums, low, high):
     return high
 
 
-def partition2(nums, low, high):
+def partition2(nums, low, high) -> int:
     '''
         一遍双向扫描,同时从左边和右边一起扫描
     :param nums:
