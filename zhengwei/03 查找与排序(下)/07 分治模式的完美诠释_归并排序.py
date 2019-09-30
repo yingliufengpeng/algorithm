@@ -38,6 +38,8 @@ def mergesort(nums1: List[int], nums2: List[int]) -> List[int]:
     解决: 对两个子序列递归进行排序
     合并: 合并两个已经排序的子序列以得到排序的结果
 '''
+
+
 def MergeSort(nums, p, r):
     if p >= r:
         return

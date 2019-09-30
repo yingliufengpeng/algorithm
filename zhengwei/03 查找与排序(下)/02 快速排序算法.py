@@ -71,11 +71,18 @@ def partition2(nums, low, high) -> int:
     return right
 
 
+'''
+    快速排序 
+        1: 先对数组以第一个元素进行分区的操作,然后对分别的各个子区域进行相关的递归排序的过程
+'''
+
+
 def quickSort(nums, low, high):
     if low >= high:
         return
 
     mid = partition2(nums, low, high)
+    # mid = partition(nums, low, high)
     # print('mid is', mid)
 
     quickSort(nums, low, mid - 1)
