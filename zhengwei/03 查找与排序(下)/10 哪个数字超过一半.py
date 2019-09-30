@@ -1,13 +1,24 @@
 # -*- coding: utf-8 -*-
 
 
+nums = [1, 2, 3, 8, 8, 8, 8, 7, 8, 8]
+
+''''
+
+    只要排序之后,中间的数一定是最多出现的那个数字
 '''
 
-    思想则是使用快速排序的逻辑 在递归排序的过程中找到第k个元素的最小值
-'''
+# step1 直接排序
 
-nums = [1, 3, 4, 10, 2, 6]
+r = sorted(nums)
+print('res is ', r[-1])
 
+# step2 哈希排序
+
+pass
+
+
+# step3 使用09章节中快速求出乱序数组中的第k小的数的算法
 
 # 分区的逻辑的确很重要的特性!!!
 def partition(nums, low, high) -> int:
@@ -40,6 +51,7 @@ def partition(nums, low, high) -> int:
 
     return high
 
+
 '''
 
     最快效率的球乱序数组中的第k小的数,我们还是以快速排序为
@@ -70,8 +82,20 @@ def selectkK(nums, p, r, k):
         return selectkK(nums, q + 1, r, k - qk)
 
 
-print('nums is ', nums)
+# r = selectkK(nums, 0, len(nums) - 1, len(nums) // 2)
+#
+# print('r is', r)
 
-v = selectkK(nums, 0, len(nums) - 1, 5)
 
-print('v is ', v)
+# step4 对于不同的数字进行消除的操作
+
+s = [nums[0]]
+
+for e in nums[1:]:
+    if e != s[-1]:
+        s.pop()
+        s.append(e)
+    else:
+        break
+
+print(s)

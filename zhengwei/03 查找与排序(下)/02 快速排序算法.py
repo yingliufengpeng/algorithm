@@ -14,11 +14,12 @@ def partition(nums, low, high) -> int:
     :param nums:
     :param low:
     :param high:
-    :return:
+    :return:    返回的值则是主元素所对应的索引值
     '''
 
-    if low + 1 == high:
-        return low
+    # 不应该使用该返回值的条件
+    # if low + 1 == high:
+    #     return low
 
     pivot = nums[low]
     index = low + 1
@@ -42,11 +43,11 @@ def partition2(nums, low, high) -> int:
     :param nums:
     :param low:
     :param high:
-    :return:
+    :return:  返回的值则是主元素所对应的索引值
     '''
-
-    if low + 1 == high:
-        return low
+    # 不该使用该返回值的条件
+    # if low + 1 == high:
+    #     return low
 
     p = nums[low]
     left = low + 1
