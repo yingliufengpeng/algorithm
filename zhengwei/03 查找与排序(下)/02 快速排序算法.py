@@ -37,6 +37,14 @@ def partition(nums, low, high):
 
 
 def partition2(nums, low, high):
+    '''
+        一遍双向扫描,同时从左边和右边一起扫描
+    :param nums:
+    :param low:
+    :param high:
+    :return:
+    '''
+
     if low + 1 == high:
         return low
 
@@ -68,7 +76,7 @@ def quickSort(nums, low, high):
         return
 
     mid = partition2(nums, low, high)
-    print('mid is', mid)
+    # print('mid is', mid)
 
     quickSort(nums, low, mid - 1)
     quickSort(nums, mid + 1, high)
@@ -76,7 +84,7 @@ def quickSort(nums, low, high):
 
 #
 quickSort(nums, 0, len(nums) - 1)
-print(nums)
+print('soted nums is', nums)
 
 # b = partition(nums, 0, len(nums) - 1)
 #
