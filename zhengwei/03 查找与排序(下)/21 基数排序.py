@@ -23,9 +23,9 @@ def myradixsort(nums, p):
     index = 0
     for vs in bucket:
 
-        for j in vs:
+        for v in vs:
 
-            nums[index] = j
+            nums[index] = v
 
             index += 1
 
