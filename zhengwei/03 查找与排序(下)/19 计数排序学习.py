@@ -18,6 +18,8 @@ for e in nums:
 res = []
 
 
+print('prev nums is ', nums)
+
 for i, e in enumerate(help_nums[1:]):
 
     v = e
