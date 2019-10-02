@@ -5,10 +5,10 @@
 
     eg:
         matrix = [
-            [-1, -1, -1],
-            [-1, 2, 2],
-            [2, 2, -1],
-        ]
+                [-1, -1, -1],
+                [-1, 2, 2],
+                [-1, -1, -1],
+            ]
 '''
 
 from collections import defaultdict
@@ -60,10 +60,10 @@ for beginrow in range(N):
 
     # 每次都需要初始化该临时空间
     tmp = [0] * N
+
     for i in range(beginrow, N):
-
         row = matrix[i]
-
+        # 按列进行累加
         for ii, v in enumerate(row):
             tmp[ii] += v
 
