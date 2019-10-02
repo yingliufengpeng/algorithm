@@ -20,7 +20,7 @@ for age in nums:
 
     count_nums[age] += 1
 
-print('常规排序为: ', sorted(nums[:]))
+# print('常规排序为: ', sorted(nums[:]))
 
 print('count_nums is', count_nums)
 
