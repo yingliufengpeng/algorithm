@@ -19,16 +19,57 @@
 '''
 
 s = 'ABABABABB'
+p = 'ABA'
 
 sub_fix = []
 
+# 常规方法使用循环遍历获得后缀数组
 for i in range(len(s)):
-
     # sub_fix.append(s[i:] + ' ' + str(i))
     sub_fix.append((s[i:], i))
 
 print('sub_fix is', sub_fix)
 
+# 对字符串进行排序,不过每个后缀字符串记录了该字符串的后缀索引
 s2 = sorted(sub_fix)
 
+# 获得排序后的后缀数组,以便于以后需要
 print('soted sub_fix is', s2)
+
+l = 0
+r = len(s2) - 1
+
+
+def compare(p, q):
+    if p == q:
+        return 0
+    elif p > q:
+        return 1
+    else:
+        return -1
+
+
+while l <= r:
+
+    mid = (l + r) // 2
+
+    # 获取居中的后缀
+    midsstr, index = s2[mid]
+
+    res = None
+
+    if len(midsstr) > len(p):
+        midsstr = midsstr[0: len(p)]
+
+    res = compare(midsstr, p)
+
+    if res == 0:
+        print('index is', index)
+
+        break
+
+    elif res < 0:
+        l = mid + 1
+    else:
+
+        r = mid - 1
