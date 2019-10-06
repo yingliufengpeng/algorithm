@@ -51,8 +51,18 @@ class Interval:
     def __le__(self, other):
         return self.end <= other.end
 
+    def __ge__(self, other):
+        return self.end >= other.end
+
+    def __lt__(self, other):
+        return self.end < other.end
+
     def __gt__(self, other):
         return self.end > other.end
+
+    def __eq__(self, other):
+
+        return self.end == other.end
 
     def __str__(self):
         return '({} {} {})'.format(self.begin, self.end, self.count)
@@ -99,7 +109,6 @@ while i < n:
     count = e.count
     begin = e.begin
     while count > 0 and res[begin] == 1:
-
         begin += 1
 
         count -= 1
