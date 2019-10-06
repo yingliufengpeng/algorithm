@@ -5,8 +5,6 @@
 '''
 
 
-
-
 # 迭代版本
 
 def permutation_linear(nums):
@@ -34,10 +32,10 @@ def permutation_linear(nums):
 
         index += 1
 
-    t = map(lambda t: ''.join(str(e) for e in t), res)
+    r = map(lambda t: ''.join(str(e) for e in t), res)
     # print('t is', list(t))
 
-    return list(t)
+    return list(r)
 
 
 nums2 = 'ABCD'

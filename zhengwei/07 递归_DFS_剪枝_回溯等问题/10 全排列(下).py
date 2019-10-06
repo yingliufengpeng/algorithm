@@ -5,6 +5,8 @@
 '''
 
 res = []
+
+
 def permutation(nums, perfix):
     if len(perfix) == len(nums):
         # print('perfix is', perfix)
