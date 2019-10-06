@@ -14,6 +14,11 @@ persons = [
         'grade': 88
     },
     {
+        'name': 'lisi',
+        'age': 18,
+        'grade': 98
+    },
+    {
         'name': 'wangwu',
         'age': 20,
         'grade': 20
