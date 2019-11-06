@@ -40,6 +40,7 @@ def partition(nums, low, high) -> int:
 
     return high
 
+
 '''
 
     最快效率的球乱序数组中的第k小的数,我们还是以快速排序为
