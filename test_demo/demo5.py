@@ -70,3 +70,7 @@ class Solution:
             r = 2 ** 31 - 1
 
         return r
+
+
+m: int = 3
+print(m)

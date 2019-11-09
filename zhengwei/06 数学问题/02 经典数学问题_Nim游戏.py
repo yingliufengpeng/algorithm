@@ -35,7 +35,7 @@ def solve(nums):
     return res != 0
 
 
-nums = [5, 10, 15]
+nums = [2, 4, 5]
 
 r = solve(nums)
 
